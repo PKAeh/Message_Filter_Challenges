@@ -30,7 +30,7 @@ input:focus {
 
 .bg-friend-list {
   position: relative;
-  background: yellow;
+  background: #ffffff;
   width: 400px;
   height: 500px;
   padding: 10px;
@@ -43,12 +43,12 @@ input:focus {
 .friend-list {
   position: absolute;
   top: -25px;
-  background: blue;
+  background: #ffffff;
   width: 80%;
   height: 500px;
   padding: 10px;
   box-sizing: content-box;
   border-radius: 20px;
   overflow: auto;
-  box-shadow: black 0px 0px 10px 0px;
+  box-shadow: rgba(0, 0, 0, 0.295) 0px 0px 10px 0px;
 }
