@@ -1,12 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Friend.css'
 
-//mock data
-import userData from '../userData'
-
-const Friend = () => {
-  const [showData, setShowData] = useState(userData)
-
+const Friend = ({ showData }) => {
   return (
     <>
       {showData.map((user) => {

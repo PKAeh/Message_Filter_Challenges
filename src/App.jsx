@@ -1,9 +1,34 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { styleHeader, styleInput, styleParagraph } from './style/appStyle.js'
 import './App.css'
 import Friend from './components/Friend.jsx'
+import userData from './userData'
 
 function App() {
+  const [showData, setShowData] = useState(userData)
+  const [searchText, setSearchText] = useState('')
+
+  const onSearchText = (event) => {
+    // console.log(event.target.value)
+    const value = event.target.value
+    if (value.length === 0) {
+      setShowData(userData)
+    } else {
+      setSearchText(value)
+    }
+  }
+
+  useEffect(() => {
+    // console.log(searchText)
+    const showFilter = userData.filter((data) => {
+      return (
+        data.first_name.includes(searchText) ||
+        data.last_name.includes(searchText)
+      )
+    })
+    setShowData(showFilter)
+  }, [searchText])
+
   return (
     <div
       style={{
@@ -34,12 +59,17 @@ function App() {
             </button>
             <h3 style={styleHeader}>Your Name</h3>
             <p style={styleParagraph}>Bangkok, Thailand</p>
-            <input type="text" placeholder="Search" style={styleInput} />
+            <input
+              type="text"
+              placeholder="Search"
+              style={styleInput}
+              onChange={onSearchText}
+            />
           </div>
         </div>
         <div className="bg-friend-list">
           <div className="friend-list">
-            <Friend />
+            <Friend showData={showData} />
           </div>
         </div>
       </div>
