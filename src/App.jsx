@@ -11,22 +11,23 @@ function App() {
   const onSearchText = (event) => {
     // console.log(event.target.value)
     const value = event.target.value
-    if (value.length === 0) {
-      setShowData(userData)
-    } else {
-      setSearchText(value)
-    }
+    // console.log(value)
+    setSearchText(value)
   }
 
   useEffect(() => {
     // console.log(searchText)
-    const showFilter = userData.filter((data) => {
-      return (
-        data.first_name.includes(searchText) ||
-        data.last_name.includes(searchText)
-      )
-    })
-    setShowData(showFilter)
+    if (searchText.length > 0) {
+      const showFilter = userData.filter((data) => {
+        return (
+          data.first_name.includes(searchText) ||
+          data.last_name.includes(searchText)
+        )
+      })
+      setShowData(showFilter)
+    } else {
+      setShowData(userData)
+    }
   }, [searchText])
 
   return (
@@ -36,6 +37,7 @@ function App() {
         justifyContent: 'center',
         background: '#d1d1d1',
         height: '100vh',
+        cursor: 'pointer',
       }}
     >
       <div style={{ marginTop: '10px', textAlign: 'center' }}>
