@@ -4,7 +4,14 @@ import './App.css'
 
 function App() {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        background: '#d1d1d1',
+        height: '100vh',
+      }}
+    >
       <div style={{ marginTop: '10px', textAlign: 'center' }}>
         <div className="bg-title">
           <div className="title-container">
