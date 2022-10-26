@@ -18,6 +18,7 @@ input:focus {
   align-items: center;
   border-radius: 50%;
   border: 0;
+  cursor: pointer;
 }
 
 .title-container {
