@@ -1,0 +1,41 @@
+.friend {
+  display: flex;
+  align-items: center;
+  border-bottom: 0.5px solid #d1d1d1;
+  padding: 10px 0;
+}
+
+.friend:first-child {
+  padding-top: 0px;
+}
+
+.friend:last-child {
+  border-bottom: none;
+}
+
+.friend img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.friend-name {
+  font-weight: bold;
+}
+
+.friend-email {
+  font-size: 0.8rem;
+  color: #3e4044b4;
+}
+
+.avatar {
+  margin: 0 10px;
+}
+.message {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+.friend-info {
+  text-align: start;
+}

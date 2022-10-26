@@ -1,6 +1,7 @@
 import React from 'react'
 import { styleHeader, styleInput, styleParagraph } from './style/appStyle.js'
 import './App.css'
+import Friend from './components/Friend.jsx'
 
 function App() {
   return (
@@ -37,7 +38,9 @@ function App() {
           </div>
         </div>
         <div className="bg-friend-list">
-          <div className="friend-list"></div>
+          <div className="friend-list">
+            <Friend />
+          </div>
         </div>
       </div>
     </div>
