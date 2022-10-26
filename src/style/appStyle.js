@@ -9,7 +9,8 @@ const styleParagraph = {
 }
 
 const styleInput = {
-  width: '85%',
+  boxSizing: 'border-box',
+  width: '100%',
   padding: '5px',
   borderRadius: '5px',
   border: '1px solid transparent',

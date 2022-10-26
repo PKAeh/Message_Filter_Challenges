@@ -3,14 +3,29 @@ input:focus {
 }
 
 .bg-title {
-  width: 400px;
-  padding: 10px;
-  box-sizing: content-box;
-  height: 140px;
   border-radius: 20px 20px 0 0;
   background-image: url(https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?ixlib=rb-1.2.1&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb);
   background-position: 50%;
   background-repeat: no-repeat;
+}
+
+.title-container > button {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 0;
+}
+
+.title-container {
+  box-sizing: border-box;
+  position: relative;
+  padding: 10px 30px;
+  box-sizing: content-box;
+  height: 140px;
 }
 
 .bg-friend-list {
