@@ -1,0 +1,39 @@
+input:focus {
+  outline: none;
+}
+
+.bg-title {
+  width: 400px;
+  padding: 10px;
+  box-sizing: content-box;
+  height: 140px;
+  border-radius: 20px 20px 0 0;
+  background-image: url(https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?ixlib=rb-1.2.1&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb);
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.bg-friend-list {
+  position: relative;
+  background: yellow;
+  width: 400px;
+  height: 500px;
+  padding: 10px;
+  box-sizing: content-box;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.friend-list {
+  position: absolute;
+  top: -25px;
+  background: blue;
+  width: 80%;
+  height: 500px;
+  padding: 10px;
+  box-sizing: content-box;
+  border-radius: 20px;
+  overflow: auto;
+  box-shadow: black 0px 0px 10px 0px;
+}

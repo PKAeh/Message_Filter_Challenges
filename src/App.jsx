@@ -1,19 +1,20 @@
+import React from 'react'
+import { styleHeader, styleInput, styleParagraph } from './style/appStyle.js'
 import './App.css'
-import { useState } from 'react'
-
-//mock data
-import userData from './userData'
 
 function App() {
-  const [showData, setShowData] = useState(userData)
-
   return (
-    <div className='container'>
-      <ul>
-        {showData.map((user) => {
-          return <li key={user.id}>{`${user.first_name} ${user.last_name}`}</li>
-        })}
-      </ul>
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div style={{ marginTop: '10px', textAlign: 'center' }}>
+        <div className="bg-title">
+          <h3 style={styleHeader}>Your Name</h3>
+          <p style={styleParagraph}>Bangkok, Thailand</p>
+          <input type="text" placeholder="Search" style={styleInput} />
+        </div>
+        <div className="bg-friend-list">
+          <div className="friend-list"></div>
+        </div>
+      </div>
     </div>
   )
 }
