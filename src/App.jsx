@@ -19,9 +19,10 @@ function App() {
     // console.log(searchText)
     if (searchText.length > 0) {
       const showFilter = userData.filter((data) => {
-        return (
-          data.first_name.includes(searchText) ||
-          data.last_name.includes(searchText)
+        const fullName =
+          data.first_name.toLowerCase() + data.last_name.toLowerCase()
+        return fullName.includes(
+          searchText.replace(' ', '').trim().toLowerCase()
         )
       })
       setShowData(showFilter)
